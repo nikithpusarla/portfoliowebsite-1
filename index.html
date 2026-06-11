@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Concepts Roofing | Premium Roofing in Knoxville, TN</title>
+    <meta name="description" content="Alpha Concepts Roofing is Knoxville's most trusted premium roofing contractor. We specialize in luxury residential and commercial roofing, roof replacement, and storm damage.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header" class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <div class="logo-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="logo-text">
+                        <span class="logo-main">ALPHA CONCEPTS</span>
+                        <span class="logo-sub">ROOFING</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#process">Process</a></li>
+
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="tel:+18655551234" class="phone-link"><i class="fa-solid fa-phone"></i> (865) 555-1234</a>
+                <a href="#contact" class="btn btn-primary">Free Estimate</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> <strong>24/7 Emergency Storm Damage Roofing Available in Knoxville!</strong> Call us now for immediate response.</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://cdn.coverr.co/videos/coverr-flying-over-a-residential-neighborhood-2613/1080p.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="trust-badge-small fade-in-up">
+                    <i class="fa-solid fa-shield-halved"></i> Licensed, Bonded & Insured in TN
+                </div>
+                <h1 class="fade-in-up delay-1">Protecting Tennessee Homes With Premium Roofing Solutions Built To Last</h1>
+                <p class="fade-in-up delay-2">Knoxville’s most trusted luxury roofing contractor. We deliver exceptional craftsmanship, unparalleled reliability, and industry-leading materials to secure your most valuable asset.</p>
+                
+                <div class="hero-buttons fade-in-up delay-3">
+                    <a href="#contact" class="btn btn-primary btn-large">Get Free Roof Inspection</a>
+                    <a href="#services" class="btn btn-secondary btn-large">Explore Services</a>
+                </div>
+                
+                <div class="hero-trust-badges fade-in-up delay-4">
+                    <div class="badge"><i class="fa-solid fa-star"></i> 5.0 Google Reviews</div>
+                    <div class="badge"><i class="fa-solid fa-award"></i> Lifetime Warranty</div>
+                    <div class="badge"><i class="fa-solid fa-clock"></i> 24/7 Emergency Response</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header text-center staggered-reveal">
+                <h4 class="subtitle">Our Expertise</h4>
+                <h2>Luxury Roofing Services</h2>
+                <p>We provide comprehensive, high-end roofing solutions tailored to protect and enhance your property.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card staggered-reveal">
+                    <div class="service-icon"><i class="fa-solid fa-house"></i></div>
+                    <h3>Residential Roofing</h3>
+                    <p>Premium architectural shingles, metal roofs, and luxury tiles installed with precision to protect your family and elevate your home's curb appeal.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card staggered-reveal">
+                    <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Commercial Roofing</h3>
+                    <p>Durable, high-performance TPO, EPDM, and modified bitumen flat roofing systems designed for Knoxville businesses.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card staggered-reveal">
+                    <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+                    <h3>Roof Replacement</h3>
+                    <p>Complete tear-offs and meticulous new installations using the industry's highest grade materials and underlayments.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="service-card staggered-reveal">
+                    <div class="service-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    <h3>Storm Damage</h3>
+                    <p>Rapid response restoration for wind, hail, and fallen tree damage, complete with comprehensive insurance claim assistance.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="service-card staggered-reveal">
+                    <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Metal Roofing</h3>
+                    <p>Standing seam metal roofing offering lifetime durability, exceptional energy efficiency, and a modern aesthetic.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="service-card staggered-reveal">
+                    <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>Detailed Inspections</h3>
+                    <p>Advanced drone technology and thorough manual assessments to identify hidden vulnerabilities before they become costly leaks.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-us section-padding bg-light">
+        <div class="container">
+            <div class="why-us-content">
+                <div class="why-us-image staggered-reveal">
+                    <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=800&auto=format&fit=crop" alt="Premium Roofing Professional">
+                    <div class="experience-badge">
+                        <span class="number count-up" data-target="15">0</span>+
+                        <span class="text">Years Experience</span>
+                    </div>
+                </div>
+                <div class="why-us-text staggered-reveal">
+                    <h4 class="subtitle">The Alpha Difference</h4>
+                    <h2>Why Homeowners Choose Alpha Concepts Roofing</h2>
+                    <p>We don't just build roofs; we build peace of mind. Our commitment to transparent communication, superior materials, and flawless execution sets us apart as the premier choice in East Tennessee.</p>
+                    
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <div>
+                                <strong>Lifetime Workmanship Guarantee</strong>
+                                <span>We stand firmly behind our installations with industry-leading warranties.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <div>
+                                <strong>Transparent, No-Surprise Pricing</strong>
+                                <span>Detailed, upfront estimates so you know exactly what you're paying for.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <div>
+                                <strong>Premium Materials Only</strong>
+                                <span>We partner exclusively with top-tier manufacturers like GAF and Owens Corning.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <div>
+                                <strong>Local Knoxville Expertise</strong>
+                                <span>Deeply familiar with Tennessee weather patterns and building codes.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="section-header text-center staggered-reveal">
+                <h4 class="subtitle">Our Craftsmanship</h4>
+                <h2>Recent Transformations</h2>
+            </div>
+            
+            <div class="portfolio-filters staggered-reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="metal">Metal</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+            </div>
+            
+            <div class="portfolio-grid staggered-reveal">
+                <div class="portfolio-item residential">
+                    <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=800&auto=format&fit=crop" alt="Luxury Residential Roof">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Farragut Estate Replacement</h3>
+                            <p>Architectural Shingles • 3 Days</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item metal">
+                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=800&auto=format&fit=crop" alt="Modern Metal Roof">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Modern Farmhouse Metal Roof</h3>
+                            <p>Standing Seam Metal • Maryville</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item commercial">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Commercial Flat Roof">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Downtown Office Building</h3>
+                            <p>TPO Flat Roof System • Knoxville</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item residential">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" alt="Suburban Home Roof">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Storm Damage Restoration</h3>
+                            <p>Full Replacement • Oak Ridge</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section id="process" class="process section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center staggered-reveal light-text">
+                <h4 class="subtitle">How We Work</h4>
+                <h2>Our Proven Process</h2>
+                <p>A seamless, stress-free experience from the first call to the final inspection.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item staggered-reveal">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-content">
+                        <h3>Comprehensive Inspection</h3>
+                        <p>We conduct a thorough, honest assessment of your roof's condition using advanced diagnostic tools.</p>
+                    </div>
+                </div>
+                <div class="timeline-item staggered-reveal">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <h3>Transparent Estimate</h3>
+                        <p>You receive a detailed, easy-to-understand proposal outlining materials, timeline, and exact costs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item staggered-reveal">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content">
+                        <h3>Material Selection</h3>
+                        <p>Our design consultants help you choose the perfect premium materials and colors to match your home's aesthetic.</p>
+                    </div>
+                </div>
+                <div class="timeline-item staggered-reveal">
+                    <div class="timeline-dot">4</div>
+                    <div class="timeline-content">
+                        <h3>Precision Installation</h3>
+                        <p>Our certified, elite crews execute the installation with meticulous attention to detail and safety.</p>
+                    </div>
+                </div>
+                <div class="timeline-item staggered-reveal">
+                    <div class="timeline-dot">5</div>
+                    <div class="timeline-content">
+                        <h3>Quality Assurance & Approval</h3>
+                        <p>A final rigorous walkthrough ensures everything meets our strict standards and your complete satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Map Section -->
+    <section id="service-area" class="service-area section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center staggered-reveal">
+                <h4 class="subtitle">Where We Work</h4>
+                <h2>Serving Greater Knoxville</h2>
+            </div>
+            <div class="map-container staggered-reveal" id="map"></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section-padding">
+        <div class="container">
+            <div class="section-header text-center staggered-reveal">
+                <h4 class="subtitle">Got Questions?</h4>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container staggered-reveal">
+                <div class="faq-item">
+                    <button class="faq-question">How long does a typical roof replacement take? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Most residential roof replacements are completed in just 1 to 2 days. Larger or more complex properties may take 3-4 days. We prioritize efficiency without ever compromising on quality.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer financing options? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer flexible, competitive financing plans, including 0% interest options for qualified buyers, to make your premium roof investment comfortable for your budget.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Will you help with my insurance claim for storm damage? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Our team includes experienced storm damage specialists who will advocate on your behalf, meet with your insurance adjuster, and ensure your property is fully restored.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What kind of warranties do you provide? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>As a certified premium installer, we offer up to 50-year non-prorated manufacturer warranties on materials, backed by our own 10-year to lifetime workmanship guarantees depending on the selected system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financing Banner -->
+    <section id="financing" class="financing section-padding bg-dark text-center">
+        <div class="container staggered-reveal light-text">
+            <h2>Flexible Financing Available</h2>
+            <p>Get the premium roof your home deserves with low monthly payments.</p>
+            <div class="finance-cards">
+                <div class="finance-card">
+                    <h3>12 Months</h3>
+                    <p class="highlight">0% Interest</p>
+                    <p>Same as cash</p>
+                </div>
+                <div class="finance-card">
+                    <h3>Low Monthly Payments</h3>
+                    <p class="highlight">Starting at $99/mo</p>
+                    <p>For qualified buyers</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-primary mt-4">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="logo-text light-text">
+                    <span class="logo-main">ALPHA CONCEPTS</span>
+                    <span class="logo-sub">ROOFING</span>
+                </div>
+                <p class="mt-3">Knoxville's premier luxury roofing contractor, dedicated to protecting homes with exceptional craftsmanship and integrity.</p>
+                <div class="social-links mt-3">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Premium Ave, Knoxville, TN 37902</li>
+                    <li><i class="fa-solid fa-phone"></i> (865) 555-1234</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@alphaconceptsroofing.com</li>
+                    <li><i class="fa-solid fa-clock"></i> Mon-Sat: 7am - 7pm (24/7 Emergency)</li>
+                </ul>
+            </div>
+            
+            <div class="footer-form">
+                <h3>Request Free Estimate</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select>
+                        <option value="">Interested In...</option>
+                        <option value="replacement">Roof Replacement</option>
+                        <option value="repair">Roof Repair</option>
+                        <option value="storm">Storm Damage</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Alpha Concepts Roofing. All Rights Reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
