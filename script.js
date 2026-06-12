@@ -124,49 +124,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // Leaflet Map Initialization
+    // Before/After Slider Logic
     // ==========================================
-    // Ensure Leaflet is loaded
-    if (typeof L !== 'undefined') {
-        // Knoxville coordinates
-        const knoxvilleCoords = [35.9606, -83.9207];
+    const baSliderInputs = document.querySelectorAll('.ba-slider-input');
+    
+    baSliderInputs.forEach(slider => {
+        slider.addEventListener('input', (e) => {
+            const container = e.target.parentElement;
+            const beforeImg = container.querySelector('.ba-before');
+            const handle = container.querySelector('.ba-slider-handle');
+            
+            const value = e.target.value;
+            beforeImg.style.width = `${value}%`;
+            handle.style.left = `${value}%`;
+        });
+    });
+    // ==========================================
+    // Premium Before/After Slider Logic (Physics-based)
+    // ==========================================
+    const premiumSliders = document.querySelectorAll('.premium-ba-slider');
+    
+    premiumSliders.forEach(slider => {
+        const input = slider.querySelector('.ba-slider-range');
+        let targetPos = 50;
+        let currentPos = 50;
+        let isAnimating = false;
         
-        const map = L.map('map', {
-            zoomControl: false,
-            scrollWheelZoom: false
-        }).setView(knoxvilleCoords, 10);
-
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
-            maxZoom: 20
-        }).addTo(map);
-
-        L.control.zoom({
-            position: 'bottomright'
-        }).addTo(map);
-
-        // Custom icon for the marker
-        const customIcon = L.divIcon({
-            className: 'custom-map-marker',
-            html: '<i class="fa-solid fa-location-dot" style="color: #D4AF37; font-size: 2.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));"></i>',
-            iconSize: [40, 40],
-            iconAnchor: [20, 40],
-            popupAnchor: [0, -40]
+        input.addEventListener('input', (e) => {
+            targetPos = parseFloat(e.target.value);
+            if (!isAnimating) {
+                isAnimating = true;
+                requestAnimationFrame(renderLoop);
+            }
         });
 
-        // Add main marker
-        L.marker(knoxvilleCoords, { icon: customIcon })
-            .addTo(map)
-            .bindPopup('<b>Alpha Concepts Roofing</b><br>Serving Knoxville & Surrounding Areas')
-            .openPopup();
+        // Easing function for smooth physics
+        const renderLoop = () => {
+            currentPos += (targetPos - currentPos) * 0.15; // Smooth easing coefficient
+            slider.style.setProperty('--pos', `${currentPos}%`);
             
-        // Draw a circle to show service area (approx 30 miles)
-        L.circle(knoxvilleCoords, {
-            color: '#0F172A',
-            fillColor: '#D4AF37',
-            fillOpacity: 0.1,
-            radius: 48000 // meters (~30 miles)
-        }).addTo(map);
-    }
+            // Continue loop if not settled
+            if (Math.abs(targetPos - currentPos) > 0.05) {
+                requestAnimationFrame(renderLoop);
+            } else {
+                currentPos = targetPos;
+                slider.style.setProperty('--pos', `${currentPos}%`);
+                isAnimating = false;
+            }
+        };
+    });
 });

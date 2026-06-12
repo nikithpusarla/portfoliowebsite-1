@@ -14,8 +14,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Leaflet CSS for Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -62,9 +61,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-video-wrapper">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="https://cdn.coverr.co/videos/coverr-flying-over-a-residential-neighborhood-2613/1080p.mp4" type="video/mp4">
-            </video>
+            <iframe class="hero-video" 
+                src="https://www.youtube.com/embed/UvYEXVfCScA?autoplay=1&mute=1&loop=1&controls=0&playlist=UvYEXVfCScA&playsinline=1&showinfo=0&rel=0&start=3&end=30" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
             <div class="hero-overlay"></div>
         </div>
         
@@ -214,17 +216,30 @@
             
             <div class="portfolio-grid staggered-reveal">
                 <div class="portfolio-item residential">
-                    <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=800&auto=format&fit=crop" alt="Luxury Residential Roof">
-                    <div class="portfolio-overlay">
+                    <div class="ba-slider-container">
+                        <img src="after.png" class="ba-image ba-after" alt="After Roof Replacement">
+                        <img src="before.png" class="ba-image ba-before" alt="Before Roof Replacement">
+                        <div class="ba-slider-handle">
+                            <div class="ba-slider-line"></div>
+                            <div class="ba-slider-icon"><i class="fa-solid fa-arrows-left-right"></i></div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider-input" aria-label="Percentage of before photo shown">
+                    </div>
+                    <div class="portfolio-overlay" style="pointer-events: none;">
                         <div class="portfolio-info">
-                            <h3>Farragut Estate Replacement</h3>
-                            <p>Architectural Shingles • 3 Days</p>
+                            <h3>Storm Damage Restoration</h3>
+                            <p>Before & After Comparison</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item metal">
-                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=800&auto=format&fit=crop" alt="Modern Metal Roof">
-                    <div class="portfolio-overlay">
+                    <div class="premium-ba-slider">
+                        <img src="metal-after.png" alt="Metal Roof After" class="ba-img-after">
+                        <img src="metal-before.png" alt="Metal Roof Before" class="ba-img-before">
+                        <div class="ba-handle-premium"></div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider-range" aria-label="Before/After Slider">
+                    </div>
+                    <div class="portfolio-overlay" style="pointer-events: none;">
                         <div class="portfolio-info">
                             <h3>Modern Farmhouse Metal Roof</h3>
                             <p>Standing Seam Metal • Maryville</p>
@@ -232,7 +247,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item commercial">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Commercial Flat Roof">
+                    <img src="commercial-roof.png" alt="Commercial Flat Roof Before and After">
                     <div class="portfolio-overlay">
                         <div class="portfolio-info">
                             <h3>Downtown Office Building</h3>
@@ -240,15 +255,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item residential">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" alt="Suburban Home Roof">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>Storm Damage Restoration</h3>
-                            <p>Full Replacement • Oak Ridge</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -303,16 +310,7 @@
     </section>
 
 
-    <!-- Map Section -->
-    <section id="service-area" class="service-area section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center staggered-reveal">
-                <h4 class="subtitle">Where We Work</h4>
-                <h2>Serving Greater Knoxville</h2>
-            </div>
-            <div class="map-container staggered-reveal" id="map"></div>
-        </div>
-    </section>
+
 
     <!-- FAQ Section -->
     <section id="faq" class="faq section-padding">
@@ -432,8 +430,7 @@
         </div>
     </footer>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <!-- Custom Script -->
     <script src="script.js"></script>
 </body>

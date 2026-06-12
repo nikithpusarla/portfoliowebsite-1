@@ -312,12 +312,19 @@ img {
     width: 100%;
     height: 100%;
     z-index: 1;
+    overflow: hidden;
 }
 
 .hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100vw;
+    height: 56.25vw; /* 16:9 Aspect Ratio */
+    min-height: 100vh;
+    min-width: 177.77vh; /* 16:9 Aspect Ratio */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 .hero-overlay {
@@ -760,18 +767,7 @@ select:focus { border-color: var(--accent-gold); }
 
 .calc-result small { color: var(--text-muted); font-size: 0.8rem; }
 
-/* ==========================================
-   Map Section
-   ========================================== */
-.map-container {
-    height: 450px;
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    margin-top: 3rem;
-    z-index: 1; /* For leaflet stacking */
-}
+
 
 /* ==========================================
    FAQ Section
@@ -932,4 +928,159 @@ select:focus { border-color: var(--accent-gold); }
     .hero-buttons { flex-direction: column; }
     .footer-grid { grid-template-columns: 1fr; }
     .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================
+   Before/After Slider
+   ========================================== */
+.ba-slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ba-slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ba-image.ba-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.ba-slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+.ba-slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--white);
+    pointer-events: none;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+.ba-slider-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-gold);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--white);
+}
+
+/* ==========================================
+   Premium Before/After Slider
+   ========================================== */
+.premium-ba-slider {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    --pos: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    cursor: col-resize;
+}
+
+.premium-ba-slider img {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.ba-img-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+.ba-slider-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: col-resize;
+    z-index: 10;
+    margin: 0;
+}
+
+.ba-handle-premium {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--pos);
+    width: 4px;
+    background: #fff;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 5;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.ba-handle-premium::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background: var(--accent-gold);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.ba-handle-premium::before {
+    content: '◄ ►';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+    letter-spacing: 2px;
+}
+
+.premium-ba-slider:hover .ba-handle-premium::after {
+    transform: translate(-50%, -50%) scale(1.1);
 }
